@@ -78,6 +78,7 @@ metadata:
   name: currencyservice
   labels:
     app: currencyservice
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -238,6 +239,7 @@ metadata:
   name: productcatalogservice
   labels:
     app: productcatalogservice
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -320,6 +322,7 @@ metadata:
   name: checkoutservice
   labels:
     app: checkoutservice
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -393,6 +396,7 @@ metadata:
   name: shippingservice
   labels:
     app: shippingservice
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -467,6 +471,7 @@ metadata:
   name: cartservice
   labels:
     app: cartservice
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -541,6 +546,7 @@ metadata:
   name: redis-cart
   labels:
     app: redis-cart
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -611,6 +617,7 @@ metadata:
   name: emailservice
   labels:
     app: emailservice
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -684,6 +691,7 @@ metadata:
   name: paymentservice
   labels:
     app: paymentservice
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -797,6 +805,7 @@ metadata:
   name: frontend
   labels:
     app: frontend
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -812,6 +821,7 @@ metadata:
   name: frontend-external
   labels:
     app: frontend
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: LoadBalancer
   selector:
@@ -889,6 +899,7 @@ metadata:
   name: recommendationservice
   labels:
     app: recommendationservice
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
@@ -964,6 +975,7 @@ metadata:
   name: adservice
   labels:
     app: adservice
+  service.kubernetes.io/topology-mode: Auto
 spec:
   type: ClusterIP
   selector:
