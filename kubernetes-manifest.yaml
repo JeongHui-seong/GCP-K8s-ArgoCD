@@ -89,8 +89,6 @@ metadata:
   name: currencyservice
   labels:
     app: currencyservice
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -99,6 +97,7 @@ spec:
   - name: grpc
     port: 7000
     targetPort: 7000
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -262,8 +261,6 @@ metadata:
   name: productcatalogservice
   labels:
     app: productcatalogservice
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -272,6 +269,7 @@ spec:
   - name: grpc
     port: 3550
     targetPort: 3550
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -357,8 +355,6 @@ metadata:
   name: checkoutservice
   labels:
     app: checkoutservice
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -367,6 +363,7 @@ spec:
   - name: grpc
     port: 5050
     targetPort: 5050
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -443,8 +440,6 @@ metadata:
   name: shippingservice
   labels:
     app: shippingservice
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -453,6 +448,7 @@ spec:
   - name: grpc
     port: 50051
     targetPort: 50051
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -530,8 +526,6 @@ metadata:
   name: cartservice
   labels:
     app: cartservice
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -540,6 +534,7 @@ spec:
   - name: grpc
     port: 7070
     targetPort: 7070
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -617,8 +612,6 @@ metadata:
   name: redis-cart
   labels:
     app: redis-cart
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -627,6 +620,7 @@ spec:
   - name: tcp-redis
     port: 6379
     targetPort: 6379
+  internalTrafficPolicy: Local
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -700,8 +694,6 @@ metadata:
   name: emailservice
   labels:
     app: emailservice
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -710,6 +702,7 @@ spec:
   - name: grpc
     port: 5000
     targetPort: 8080
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -786,8 +779,6 @@ metadata:
   name: paymentservice
   labels:
     app: paymentservice
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -796,6 +787,7 @@ spec:
   - name: grpc
     port: 50051
     targetPort: 50051
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -912,8 +904,6 @@ metadata:
   name: frontend
   labels:
     app: frontend
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -922,6 +912,7 @@ spec:
   - name: http
     port: 80
     targetPort: 8080
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: Service
@@ -929,8 +920,6 @@ metadata:
   name: frontend-external
   labels:
     app: frontend
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: LoadBalancer
   selector:
@@ -939,6 +928,7 @@ spec:
   - name: http
     port: 80
     targetPort: 8080
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -1019,8 +1009,6 @@ metadata:
   name: recommendationservice
   labels:
     app: recommendationservice
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -1029,6 +1017,7 @@ spec:
   - name: grpc
     port: 8080
     targetPort: 8080
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -1107,8 +1096,6 @@ metadata:
   name: adservice
   labels:
     app: adservice
-  annotations:
-    service.kubernetes.io/topology-mode: auto
 spec:
   type: ClusterIP
   selector:
@@ -1117,6 +1104,7 @@ spec:
   - name: grpc
     port: 9555
     targetPort: 9555
+  internalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: ServiceAccount
