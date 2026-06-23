@@ -33,6 +33,16 @@ spec:
       labels:
         app: currencyservice
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -206,6 +216,16 @@ spec:
       labels:
         app: productcatalogservice
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -291,6 +311,16 @@ spec:
       labels:
         app: checkoutservice
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -385,6 +415,16 @@ spec:
       labels:
         app: shippingservice
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -470,6 +510,16 @@ spec:
       labels:
         app: cartservice
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -556,6 +606,16 @@ spec:
       labels:
         app: redis-cart
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -637,6 +697,16 @@ spec:
       labels:
         app: emailservice
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -724,6 +794,16 @@ spec:
       labels:
         app: paymentservice
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -811,6 +891,16 @@ spec:
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -950,6 +1040,16 @@ spec:
       labels:
         app: recommendationservice
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
@@ -1039,6 +1139,16 @@ spec:
       labels:
         app: adservice
     spec:
+      # tolerations 설정 주입
+      tolerations:
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
       affinity:
         podAntiAffinity:
