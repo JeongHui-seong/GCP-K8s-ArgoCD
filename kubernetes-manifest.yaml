@@ -33,9 +33,6 @@ spec:
       labels:
         app: currencyservice
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -221,9 +218,6 @@ spec:
       labels:
         app: productcatalogservice
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -321,9 +315,6 @@ spec:
       labels:
         app: checkoutservice
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -430,9 +421,6 @@ spec:
       labels:
         app: shippingservice
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -530,9 +518,6 @@ spec:
       labels:
         app: cartservice
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -631,9 +616,6 @@ spec:
       labels:
         app: redis-cart
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -727,9 +709,6 @@ spec:
       labels:
         app: emailservice
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -829,9 +808,6 @@ spec:
       labels:
         app: paymentservice
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -931,9 +907,6 @@ spec:
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -1085,9 +1058,6 @@ spec:
       labels:
         app: recommendationservice
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
@@ -1189,9 +1159,6 @@ spec:
       labels:
         app: adservice
     spec:
-      # 워커 노드만 스케줄러 후보군 등록
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
       # tolerations 설정 주입
       tolerations:
       - key: "node.kubernetes.io/not-ready"
