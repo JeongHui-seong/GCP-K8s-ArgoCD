@@ -270,7 +270,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: productcatalogservice
       serviceAccountName: productcatalogservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -382,7 +382,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: checkoutservice
       serviceAccountName: checkoutservice
       securityContext:
         fsGroup: 1000
@@ -503,7 +503,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: shippingservice
       serviceAccountName: shippingservice
       securityContext:
         fsGroup: 1000
@@ -615,7 +615,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: cartservice
       serviceAccountName: cartservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -728,7 +728,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: redis-cart
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -836,7 +836,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: emailservice
       serviceAccountName: emailservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -950,7 +950,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: paymentservice
       serviceAccountName: paymentservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -1064,7 +1064,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: frontend
       serviceAccountName: frontend
       securityContext:
         fsGroup: 1000
@@ -1230,7 +1230,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: recommendationservice
       serviceAccountName: recommendationservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -1346,7 +1346,7 @@ spec:
         whenUnsatisfiable: ScheduleAnyway
         labelSelector:
           matchLabels:
-            app: currencyservice
+            app: adservice
       serviceAccountName: adservice
       terminationGracePeriodSeconds: 5
       securityContext:
