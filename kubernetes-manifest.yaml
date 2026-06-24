@@ -51,26 +51,21 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - currencyservice
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: currencyservice
+            topologyKey: "kubernetes.io/hostname"
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: currencyservice
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: currencyservice
       serviceAccountName: currencyservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -251,26 +246,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - productcatalogservice
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: productcatalogservice
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: productcatalogservice
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: productcatalogservice
       serviceAccountName: productcatalogservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -363,26 +354,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - checkoutservice
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: checkoutservice
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: checkoutservice
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: checkoutservice
       serviceAccountName: checkoutservice
       securityContext:
         fsGroup: 1000
@@ -484,26 +471,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - shippingservice
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: shippingservice
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: shippingservice
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: shippingservice
       serviceAccountName: shippingservice
       securityContext:
         fsGroup: 1000
@@ -596,26 +579,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - cartservice
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: cartservice
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: cartservice
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: cartservice
       serviceAccountName: cartservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -709,26 +688,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - redis-cart
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: redis-cart
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: redis-cart
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: redis-cart
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -817,26 +792,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - emailservice
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: emailservice
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: emailservice
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: emailservice
       serviceAccountName: emailservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -931,26 +902,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - paymentservice
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: paymentservice
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: paymentservice
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: paymentservice
       serviceAccountName: paymentservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -1045,26 +1012,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - frontend
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: frontend
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: frontend
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: frontend
       serviceAccountName: frontend
       securityContext:
         fsGroup: 1000
@@ -1211,26 +1174,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - recommendationservice
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: recommendationservice
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: recommendationservice
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: recommendationservice
       serviceAccountName: recommendationservice
       terminationGracePeriodSeconds: 5
       securityContext:
@@ -1327,26 +1286,22 @@ spec:
         effect: "NoExecute"
         tolerationSeconds: 3
       # Pod Anti-Affinity 추가 (호스트네임 기준으로 서비스 연결)
-      # affinity:
-      #   podAntiAffinity:
-      #     preferredDuringSchedulingIgnoredDuringExecution:
-      #     - weight: 100
-      #       podAffinityTerm:
-      #         labelSelector:
-      #           matchExpressions:
-      #           - key: app
-      #             operator: In
-      #             values:
-      #             - adservice
-      #         topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution: # 강제 조건 (Must)
+          - labelSelector:
+              matchLabels:
+                app: adservice
+            topologyKey: "kubernetes.io/hostname"
+
       # Topology Spread Constraint로 균등 분배
-      topologySpreadConstraints:
-      - maxSkew: 1
-        topologyKey: kubernetes.io/hostname
-        whenUnsatisfiable: ScheduleAnyway
-        labelSelector:
-          matchLabels:
-            app: adservice
+      # topologySpreadConstraints:
+      # - maxSkew: 1
+      #   topologyKey: kubernetes.io/hostname
+      #   whenUnsatisfiable: ScheduleAnyway
+      #   labelSelector:
+      #     matchLabels:
+      #       app: adservice
       serviceAccountName: adservice
       terminationGracePeriodSeconds: 5
       securityContext:
