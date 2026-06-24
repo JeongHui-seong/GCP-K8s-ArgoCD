@@ -25,6 +25,13 @@ metadata:
   labels:
     app: currencyservice
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: currencyservice
@@ -210,6 +217,13 @@ metadata:
   labels:
     app: productcatalogservice
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: productcatalogservice
@@ -307,6 +321,13 @@ metadata:
   labels:
     app: checkoutservice
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: checkoutservice
@@ -413,6 +434,13 @@ metadata:
   labels:
     app: shippingservice
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: shippingservice
@@ -510,6 +538,13 @@ metadata:
   labels:
     app: cartservice
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: cartservice
@@ -608,6 +643,13 @@ metadata:
   labels:
     app: redis-cart
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: redis-cart
@@ -701,6 +743,13 @@ metadata:
   labels:
     app: emailservice
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: emailservice
@@ -800,6 +849,13 @@ metadata:
   labels:
     app: paymentservice
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: paymentservice
@@ -897,6 +953,13 @@ metadata:
   labels:
     app: frontend
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: frontend
@@ -1050,6 +1113,13 @@ metadata:
   labels:
     app: recommendationservice
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: recommendationservice
@@ -1151,6 +1221,13 @@ metadata:
   labels:
     app: adservice
 spec:
+  replicas: 2
+  # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0 # 업데이트 중 추가로 생성할 수 있는 최대 pod 수
+      maxUnavailable: 1 # 업데이트 중 동시에 사용할 수 없는 상태의 최대 pod 수
   selector:
     matchLabels:
       app: adservice
