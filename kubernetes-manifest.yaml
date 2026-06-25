@@ -1127,13 +1127,15 @@ metadata:
   labels:
     app: frontend
 spec:
-  type: LoadBalancer
+  #type: LoadBalancer
+  type: NodePort
   selector:
     app: frontend
   ports:
   - name: http
     port: 80
     targetPort: 8080
+    nodePort: 31202
   internalTrafficPolicy: Local
 ---
 apiVersion: v1
