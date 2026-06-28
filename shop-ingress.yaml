@@ -12,7 +12,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: shop.jhs-k8s.kro.kr
+  - host: shop.jhs-dev.cloud
     http:
       paths:
       - path: /
@@ -25,5 +25,5 @@ spec:
   # 쇼핑몰 전용 SSL 인증서 방을 지정합니다.
   tls:
   - hosts:
-    - shop.jhs-k8s.kro.kr
+    - shop.jhs-dev.cloud
     secretName: shop-frontend-tls # Cert-Manager가 이 이름으로 인증서를 구워다 줍니다.
