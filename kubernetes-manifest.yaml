@@ -1043,7 +1043,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: hshs99/frontend:95e4bf498a2799949b9ff6e7a317ba05d7f963d2
+          image: hshs99/frontend:0b2cf20e2f183dac1c8c16a2905bc6344282af18
           ports:
           - containerPort: 8080
           readinessProbe:
