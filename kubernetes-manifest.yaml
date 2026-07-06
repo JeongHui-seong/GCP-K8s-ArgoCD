@@ -25,7 +25,7 @@ metadata:
   labels:
     app: currencyservice
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -220,7 +220,7 @@ metadata:
   labels:
     app: productcatalogservice
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -328,7 +328,7 @@ metadata:
   labels:
     app: checkoutservice
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -445,7 +445,7 @@ metadata:
   labels:
     app: shippingservice
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -553,7 +553,7 @@ metadata:
   labels:
     app: cartservice
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -662,7 +662,7 @@ metadata:
   labels:
     app: redis-cart
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -766,7 +766,7 @@ metadata:
   labels:
     app: emailservice
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -876,7 +876,7 @@ metadata:
   labels:
     app: paymentservice
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -984,7 +984,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -1150,7 +1150,7 @@ metadata:
   labels:
     app: recommendationservice
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
@@ -1262,7 +1262,7 @@ metadata:
   labels:
     app: adservice
 spec:
-  replicas: 2
+  replicas: 1
   # 롤링 업데이트 시 하나 먼저 지우고 하나 띄우는 방식
   strategy:
     type: RollingUpdate
